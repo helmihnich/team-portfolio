@@ -1,7 +1,24 @@
 "use client"
 import { ArrowRight, Lightning, CheckCircle } from '@phosphor-icons/react';
+import { useMemo } from 'react';
 
 export default function Hero() {
+  // Dynamically calculate current quarter and year
+  const currentPeriod = useMemo(() => {
+    const now = new Date();
+    const month = now.getMonth(); // 0-11
+    const year = now.getFullYear();
+    
+    // Determine quarter based on month
+    let quarter;
+    if (month >= 0 && month <= 2) quarter = 'Q1';
+    else if (month >= 3 && month <= 5) quarter = 'Q2';
+    else if (month >= 6 && month <= 8) quarter = 'Q3';
+    else quarter = 'Q4';
+    
+    return `${quarter} ${year}`;
+  }, []);
+
   return (
     <section className="relative min-h-screen px-4 py-12 lg:px-20 lg:py-24 flex items-center justify-center bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
       {/* Animated background elements */}
@@ -16,13 +33,13 @@ export default function Hero() {
 
       <div className="flex flex-col max-w-[1200px] flex-1 relative z-10">
         <div className="flex flex-col gap-8 items-center text-center">
-          {/* Status badge */}
-          <div className="group inline-flex items-center gap-2.5 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-blue-400 hover:border-blue-500/50 hover:bg-blue-500/20 transition-all duration-300 cursor-pointer shadow-lg shadow-blue-500/10">
+          {/* Status badge with dynamic quarter */}
+          <div className="group inline-flex items-center gap-2.5 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-blue-400 hover:border-blue-500/50 hover:bg-blue-500/20 transition-all duration-300 shadow-lg shadow-blue-500/10">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-400 shadow-lg shadow-blue-400/50" />
             </span>
-            <span>Accepting Projects for Q4 2024</span>
+            <span>Accepting Projects for {currentPeriod}</span>
             <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={16} weight="bold" />
           </div>
 
@@ -52,10 +69,6 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-2 text-gray-300">
               <CheckCircle className="text-blue-400" size={20} weight="fill" />
-              <span className="text-sm font-medium">Senior-Only Team</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-300">
-              <CheckCircle className="text-blue-400" size={20} weight="fill" />
               <span className="text-sm font-medium">Fixed Scope Pricing</span>
             </div>
           </div>
@@ -69,7 +82,13 @@ export default function Hero() {
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
             </button>
-            <button className="group flex h-14 items-center justify-center rounded-xl border-2 border-slate-700 bg-slate-900/50 backdrop-blur-sm px-10 text-base font-bold text-white transition-all hover:border-blue-500/50 hover:bg-slate-800/50 hover:shadow-lg hover:shadow-blue-500/10">
+            <button 
+              onClick={() => {
+                const element = document.getElementById('work');
+                element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+              className="group flex h-14 items-center justify-center rounded-xl border-2 border-slate-700 bg-slate-900/50 backdrop-blur-sm px-10 text-base font-bold text-white transition-all hover:border-blue-500/50 hover:bg-slate-800/50 hover:shadow-lg hover:shadow-blue-500/10"
+            >
               <span className="flex items-center gap-2">
                 View Mission Briefs
                 <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={18} weight="bold" />
@@ -77,17 +96,6 @@ export default function Hero() {
             </button>
           </div>
 
-          {/* Social proof / trust indicators */}
-          <div className="flex items-center gap-2 mt-8 text-gray-500 text-sm">
-            <div className="flex -space-x-2">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 border-2 border-slate-900" />
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 border-2 border-slate-900" />
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 border-2 border-slate-900" />
-            </div>
-            <span className="font-medium">
-              Trusted by founders at <span className="text-white">YC, Techstars & Fortune 500</span>
-            </span>
-          </div>
         </div>
       </div>
 

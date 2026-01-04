@@ -25,7 +25,7 @@ export function CTA() {
                 </h2>
                 
                 <p className="text-gray-400 text-xl mb-10 max-w-2xl leading-relaxed">
-                    We only take on <span className="text-white font-semibold">2 new projects per quarter</span> to maintain elite standards. Secure your slot today.
+                    We only take on <span className="text-white font-semibold">limited number of projects</span> to maintain elite standards. Secure your slot today.
                 </p>
 
                 {/* CTA Button with enhanced effects */}

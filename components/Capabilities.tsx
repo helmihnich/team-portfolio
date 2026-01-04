@@ -7,7 +7,7 @@ export default function Capabilities() {
       icon: Globe,
       title: 'Full-Stack Web',
       description: "Scalable architectures built for speed. We don't just ship code; we ship business logic that scales.",
-      tags: ['Next.js', 'Node', 'Supabase'],
+      tags: ['Next.js', 'Node.js'],
       gradient: 'from-blue-500/20 to-cyan-500/20',
       iconGradient: 'from-blue-500 to-cyan-500',
       borderGradient: 'from-blue-500/50 to-cyan-500/50',
@@ -55,10 +55,6 @@ export default function Capabilities() {
               Three core domains. Infinite possibilities. Built for velocity and scale.
             </p>
           </div>
-          <button className="group hidden md:flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold text-sm transition-colors">
-            View all services
-            <ArrowRight className="group-hover:translate-x-1 transition-transform" size={16} weight="bold" />
-          </button>
         </div>
 
         {/* Capabilities Grid */}
@@ -109,12 +105,6 @@ export default function Capabilities() {
                       </span>
                     ))}
                   </div>
-
-                  {/* Hover arrow indicator */}
-                  <div className="flex items-center gap-2 mt-6 text-sm font-semibold text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span>Learn more</span>
-                    <ArrowRight className="group-hover:translate-x-1 transition-transform" size={16} weight="bold" />
-                  </div>
                 </div>
 
                 {/* Corner accent */}
@@ -124,25 +114,16 @@ export default function Capabilities() {
           })}
         </div>
 
-        {/* Mobile CTA */}
-        <button className="md:hidden group flex items-center justify-center gap-2 w-full mt-8 px-6 py-3 text-blue-400 hover:text-blue-300 font-semibold text-sm transition-colors bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-blue-500/50">
-          View all services
-          <ArrowRight className="group-hover:translate-x-1 transition-transform" size={16} weight="bold" />
-        </button>
 
         {/* Bottom stats */}
-        <div className="grid grid-cols-3 gap-6 mt-16 pt-16 border-t border-slate-800/50">
+        <div className="grid grid-cols-2 gap-6 mt-16 pt-16 border-t border-slate-800/50">
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">10+</div>
             <div className="text-sm text-gray-500 font-medium">Projects Shipped</div>
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-white mb-2">3-5x</div>
             <div className="text-sm text-gray-500 font-medium">Faster Delivery</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-2">100%</div>
-            <div className="text-sm text-gray-500 font-medium">Client Satisfaction</div>
           </div>
         </div>
       </div>

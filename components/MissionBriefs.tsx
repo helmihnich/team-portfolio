@@ -4,51 +4,99 @@ import { Sparkle, TrendUp, Lightning, CheckCircle, ArrowRight } from '@phosphor-
 export default function MissionBriefs() {
   const briefs = [
     {
-      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop',
-      tag: 'FINTECH',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop',
+      tag: 'HEALTHTECH',
       tagColor: 'from-blue-600 to-cyan-600',
       tagBg: 'bg-blue-500/10',
       tagBorder: 'border-blue-500/30',
-      title: 'Automated Data Processing Pipeline',
-      problem: 'Client spending 40hrs/week manually entering financial data.',
-      solution: 'Custom Python AI agent with OCR to parse and categorize invoices.',
-      roi: 'Saved 40hrs/week',
+      title: 'Patient Data Visualization Platform',
+      problem: 'Healthcare providers struggled with fragmented patient data across multiple systems, hindering treatment decisions.',
+      solution: 'Full-stack Next.js/Node.js platform with HL7-compliant FHIR APIs for unified patient data visualization and real-time interoperability.',
+      roi: 'HIPAA Compliant',
       metrics: [
-        { label: 'Time Saved', value: '40hrs/week' },
-        { label: 'Accuracy', value: '99.2%' },
-        { label: 'ROI', value: '12 months' },
+        { label: 'Stack', value: 'Next.js' },
+        { label: 'Backend', value: 'Node.js' },
+        { label: 'Standard', value: 'FHIR API' },
       ],
     },
     {
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-      tag: 'E-COMMERCE',
+      image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&h=600&fit=crop',
+      tag: 'AI/ML',
       tagColor: 'from-purple-600 to-pink-600',
       tagBg: 'bg-purple-500/10',
       tagBorder: 'border-purple-500/30',
-      title: 'High-Performance Mobile Rebuild',
-      problem: 'Legacy web-wrapper app was slow, leading to 70% cart abandonment.',
-      solution: 'Native Flutter rebuild with optimized caching and 60fps animations.',
-      roi: '+40% Conversions',
+      title: 'Clinical Document Digitization Pipeline',
+      problem: 'Low-resolution clinical document photos were non-compliant with international standards, making them unreliable for medical exchange.',
+      solution: 'AI-powered R&D pipeline using OCR, NER, and ETL processes to transform photos into standardized, structured digital documents.',
+      roi: 'Standards Compliant',
       metrics: [
-        { label: 'Conversion Lift', value: '+40%' },
-        { label: 'Load Time', value: '-65%' },
-        { label: 'User Rating', value: '4.8★' },
+        { label: 'AI/ML', value: 'LLM' },
+        { label: 'Processing', value: 'OCR + NER' },
+        { label: 'Language', value: 'Python' },
       ],
     },
     {
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-      tag: 'SAAS',
-      tagColor: 'from-orange-600 to-red-600',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop',
+      tag: 'CLOUD INFRA',
+      tagColor: 'from-cyan-600 to-blue-600',
+      tagBg: 'bg-cyan-500/10',
+      tagBorder: 'border-cyan-500/30',
+      title: 'Azure FHIR Server Deployment',
+      problem: 'Healthcare organization needed secure, real-time clinical data ingestion from mobile apps with FHIR compliance.',
+      solution: 'Architected Azure FHIR Servers (R4) with custom data conversion pipelines and secure authentication workflows for React Native applications.',
+      roi: 'Real-Time Sync',
+      metrics: [
+        { label: 'Cloud', value: 'Azure' },
+        { label: 'Mobile', value: 'React Native' },
+        { label: 'Backend', value: 'Node.js' },
+      ],
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop',
+      tag: 'WEB APP',
+      tagColor: 'from-orange-600 to-yellow-600',
       tagBg: 'bg-orange-500/10',
       tagBorder: 'border-orange-500/30',
-      title: 'Real-Time Analytics Dashboard',
-      problem: 'Enterprise client needed live data visualization for 1M+ daily events.',
-      solution: 'Serverless architecture with WebSocket streams and optimized React rendering.',
-      roi: '10x Performance',
+      title: 'Ride Booking Platform',
+      problem: 'Transportation company in France needed a complete booking system with real-time order management.',
+      solution: 'Built frontend booking platform with admin dashboard for order approval workflows, enabling efficient ride management.',
+      roi: 'Production Ready',
       metrics: [
-        { label: 'Performance', value: '10x faster' },
-        { label: 'Concurrent Users', value: '50K+' },
-        { label: 'Uptime', value: '99.99%' },
+        { label: 'Framework', value: 'Next.js' },
+        { label: 'Type', value: 'Full-Stack' },
+        { label: 'Region', value: 'France' },
+      ],
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=600&fit=crop',
+      tag: 'AI RESEARCH',
+      tagColor: 'from-green-600 to-emerald-600',
+      tagBg: 'bg-green-500/10',
+      tagBorder: 'border-green-500/30',
+      title: 'Medical Semantic Data Generator',
+      problem: 'Healthcare AI models lacked high-quality training data while maintaining strict privacy and confidentiality standards.',
+      solution: 'Developed LLM-powered semantic data generator using RAG and LangChain to create privacy-compliant synthetic medical datasets.',
+      roi: 'Privacy First',
+      metrics: [
+        { label: 'AI Core', value: 'LLM + RAG' },
+        { label: 'Framework', value: 'LangChain' },
+        { label: 'Language', value: 'Python' },
+      ],
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=800&h=600&fit=crop',
+      tag: 'AI PLATFORM',
+      tagColor: 'from-violet-600 to-purple-600',
+      tagBg: 'bg-violet-500/10',
+      tagBorder: 'border-violet-500/30',
+      title: 'Natural Language Clinical Query System',
+      problem: 'Healthcare professionals spent excessive time navigating complex medical databases to retrieve clinical information.',
+      solution: 'Built intelligent conversational platform using LangGraph that translates natural language questions into standardized healthcare queries.',
+      roi: 'AI-Powered',
+      metrics: [
+        { label: 'AI Engine', value: 'LangGraph' },
+        { label: 'Frontend', value: 'React' },
+        { label: 'DevOps', value: 'Docker + CI/CD' },
       ],
     },
   ];
@@ -151,12 +199,6 @@ export default function MissionBriefs() {
                       </div>
                     ))}
                   </div>
-
-                  {/* View Case Study Link */}
-                  <button className="group/link inline-flex items-center gap-2 mt-6 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors self-start">
-                    <span>View full case study</span>
-                    <ArrowRight className="group-hover/link:translate-x-1 transition-transform" size={16} weight="bold" />
-                  </button>
                 </div>
               </div>
             </div>

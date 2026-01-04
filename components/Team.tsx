@@ -6,9 +6,9 @@ export default function Team() {
     {
       image: "/team/firas.png",
       title: 'Firas Hajlaoui',
-      role: 'Web & Infrastructure',
-      description: 'Ex-Platform Lead at a Series B fintech. Specializes in distributed systems, Next.js optimization, and serverless architectures that handle millions of requests.',
-      tags: ['System Design', 'Cloud Native'],
+      role: 'IT Engineer',
+      description: 'IT Engineer specialized in healthcare interoperability. Focused on building integrated digital solutions that eliminate data silos, improve clinical speed, and ensure healthcare systems work perfectly together.',
+      tags: ['LLM', 'React native', 'Django', 'Langchain', 'HL7 FHIR/HL7 v2/Dicom'],
       gradient: 'from-blue-600/20 to-cyan-600/20',
       borderGradient: 'from-blue-500 to-cyan-500',
     },
@@ -17,7 +17,7 @@ export default function Team() {
       title: 'Helmi Hnich',
       role: 'Full Stack JS Engineer',
       description: 'Full-stack JavaScript engineer focused on building high-performance web and mobile applications. Passionate about smooth animations, scalable architectures, and crafting user experiences that feel fast, intuitive, and reliable.',
-      tags: ['React/Next/RN', 'Node JS', 'HL7 FHIR'],
+      tags: ['React.js/Next.js', 'Node.js', 'HL7 FHIR'],
       gradient: 'from-purple-600/20 to-pink-600/20',
       borderGradient: 'from-purple-500 to-pink-500',
     },
@@ -55,7 +55,7 @@ export default function Team() {
               The Operators
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed">
-              Three senior engineers. <span className="text-white font-semibold">Zero juniors.</span> We execute with military precision and specialized expertise in every key domain.
+              Three senior engineers. Zero juniors. We execute with military precision and specialized expertise in every key domain. 
             </p>
           </div>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-xs font-bold uppercase tracking-wider shadow-lg shadow-green-500/10">
@@ -136,11 +136,6 @@ export default function Team() {
                   ))}
                 </div>
 
-                {/* View profile link */}
-                <button className="group/link flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors mt-2 opacity-0 group-hover:opacity-100">
-                  <span>View full profile</span>
-                  <ArrowUpRight className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" size={16} weight="bold" />
-                </button>
               </div>
             </div>
           ))}
