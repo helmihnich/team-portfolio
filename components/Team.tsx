@@ -23,6 +23,8 @@ export default function Team() {
       ],
       gradient: "from-blue-600/20 to-cyan-600/20",
       borderGradient: "from-blue-500 to-cyan-500",
+      linkedin: "https://www.linkedin.com/in/firas-hajlaoui",
+      github: "https://github.com/Hajlaoui30",
     },
     {
       image: "/team/helmi2.png",
@@ -33,6 +35,8 @@ export default function Team() {
       tags: ["React.js/Next.js", "Node.js", "HL7 FHIR"],
       gradient: "from-purple-600/20 to-pink-600/20",
       borderGradient: "from-purple-500 to-pink-500",
+      linkedin: "https://www.linkedin.com/in/helmi-hnich-451414126/",
+      github: "https://github.com/helmihnich",
     },
     {
       image: "/team/Mohamed.png",
@@ -48,6 +52,8 @@ export default function Team() {
       ],
       gradient: "from-emerald-600/20 to-teal-600/20",
       borderGradient: "from-emerald-500 to-teal-500",
+      linkedin: "https://www.linkedin.com/in/mohamed-ali-ben-younes",
+      github: "https://github.com/mohamedalibenyounes",
     },
   ];
 
@@ -131,12 +137,20 @@ export default function Team() {
 
                     {/* Social links - appear on hover */}
                     <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <button className="w-8 h-8 rounded-lg bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500/50 transition-all">
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-lg bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500/50 transition-all">
                         <LinkedinLogo size={16} weight="bold" />
-                      </button>
-                      <button className="w-8 h-8 rounded-lg bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500/50 transition-all">
+                      </a>
+                      <a
+                        href={member.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-lg bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500/50 transition-all">
                         <GithubLogo size={16} weight="bold" />
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
