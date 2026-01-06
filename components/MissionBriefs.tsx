@@ -99,6 +99,22 @@ export default function MissionBriefs() {
         { label: 'DevOps', value: 'Docker + CI/CD' },
       ],
     },
+    {
+      image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop',
+      tag: 'HOSPITAL OPS',
+      tagColor: 'from-emerald-600 to-teal-600',
+      tagBg: 'bg-emerald-500/10',
+      tagBorder: 'border-emerald-500/30',
+      title: 'Hospital Bed & Resource Monitoring Dashboard',
+      problem: 'Hospital staff lacked real-time visibility into bed occupancy and room availability, leading to delays in patient flow and resource allocation.',
+      solution: 'Developed a real-time web dashboard to monitor hospital bed and room occupancy, with alerting mechanisms for scheduled procedures and medication administration.',
+      roi: 'Real-Time Ops',
+      metrics: [
+        { label: 'Frontend', value: 'React' },
+        { label: 'Backend', value: 'Django' },
+        { label: 'Type', value: 'Full Stack' },
+      ],
+    },
   ];
 
   return (
