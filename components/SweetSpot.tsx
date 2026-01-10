@@ -1,4 +1,4 @@
-"use client" 
+"use client"
 import { User, X, Check, BuildingOffice, UsersThree, CheckCircle, Sparkle } from '@phosphor-icons/react';
 
 export default function SweetSpot() {
@@ -27,7 +27,7 @@ export default function SweetSpot() {
         },
         {
             icon: UsersThree,
-            title: 'Strike Team',
+            title: 'MedOps',
             subtitle: 'The Precision Unit',
             items: [
                 { text: 'Elite Speed & Mastery', status: 'best' },
@@ -66,13 +66,12 @@ export default function SweetSpot() {
                     {options.map((option, i) => {
                         const Icon = option.icon;
                         return (
-                            <div 
-                                key={i} 
-                                className={`group relative rounded-2xl p-6 transition-all duration-500 ${
-                                    option.highlighted 
-                                        ? 'bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-blue-600/20 border-2 border-blue-500/50 shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/30 scale-105 md:scale-110' 
+                            <div
+                                key={i}
+                                className={`group relative rounded-2xl p-6 transition-all duration-500 ${option.highlighted
+                                        ? 'bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-blue-600/20 border-2 border-blue-500/50 shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/30 scale-105 md:scale-110'
                                         : 'bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-slate-600/50 opacity-75 hover:opacity-100'
-                                }`}
+                                    }`}
                             >
                                 {/* Recommended badge */}
                                 {option.highlighted && (
@@ -84,26 +83,23 @@ export default function SweetSpot() {
 
                                 {/* Icon and Title */}
                                 <div className="flex flex-col items-center gap-4 mb-6 text-center">
-                                    <div className={`w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                                        option.highlighted
+                                    <div className={`w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-300 ${option.highlighted
                                             ? 'bg-gradient-to-br from-blue-500/30 to-purple-500/30 border border-blue-500/50 shadow-lg shadow-blue-500/30'
                                             : 'bg-slate-800/50 border border-slate-700/50 group-hover:border-slate-600'
-                                    }`}>
-                                        <Icon 
-                                            className={option.highlighted ? 'text-blue-400' : 'text-gray-400'} 
+                                        }`}>
+                                        <Icon
+                                            className={option.highlighted ? 'text-blue-400' : 'text-gray-400'}
                                             size={32}
                                             weight={option.highlighted ? 'duotone' : 'regular'}
                                         />
                                     </div>
                                     <div>
-                                        <h3 className={`text-xl font-bold mb-1 ${
-                                            option.highlighted ? 'text-white' : 'text-gray-200'
-                                        }`}>
+                                        <h3 className={`text-xl font-bold mb-1 ${option.highlighted ? 'text-white' : 'text-gray-200'
+                                            }`}>
                                             {option.title}
                                         </h3>
-                                        <p className={`text-xs font-medium ${
-                                            option.highlighted ? 'text-blue-400' : 'text-gray-500'
-                                        }`}>
+                                        <p className={`text-xs font-medium ${option.highlighted ? 'text-blue-400' : 'text-gray-500'
+                                            }`}>
                                             {option.subtitle}
                                         </p>
                                     </div>
@@ -112,36 +108,34 @@ export default function SweetSpot() {
                                 {/* Features list */}
                                 <ul className="flex flex-col gap-3">
                                     {option.items.map((item, idx) => (
-                                        <li 
-                                            key={idx} 
-                                            className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-300 ${
-                                                option.highlighted 
-                                                    ? 'bg-slate-900/30 hover:bg-slate-900/50' 
+                                        <li
+                                            key={idx}
+                                            className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-300 ${option.highlighted
+                                                    ? 'bg-slate-900/30 hover:bg-slate-900/50'
                                                     : 'hover:bg-slate-800/30'
-                                            }`}
+                                                }`}
                                         >
                                             {item.status === 'best' ? (
-                                                <CheckCircle 
-                                                    className="text-blue-400 flex-shrink-0" 
-                                                    size={20} 
-                                                    weight="fill" 
+                                                <CheckCircle
+                                                    className="text-blue-400 flex-shrink-0"
+                                                    size={20}
+                                                    weight="fill"
                                                 />
                                             ) : item.status === 'good' ? (
-                                                <Check 
-                                                    className="text-green-500 flex-shrink-0" 
-                                                    size={20} 
-                                                    weight="bold" 
+                                                <Check
+                                                    className="text-green-500 flex-shrink-0"
+                                                    size={20}
+                                                    weight="bold"
                                                 />
                                             ) : (
-                                                <X 
-                                                    className="text-red-500 flex-shrink-0" 
-                                                    size={20} 
-                                                    weight="bold" 
+                                                <X
+                                                    className="text-red-500 flex-shrink-0"
+                                                    size={20}
+                                                    weight="bold"
                                                 />
                                             )}
-                                            <span className={`text-sm font-medium ${
-                                                option.highlighted ? 'text-white' : 'text-gray-400'
-                                            }`}>
+                                            <span className={`text-sm font-medium ${option.highlighted ? 'text-white' : 'text-gray-400'
+                                                }`}>
                                                 {item.text}
                                             </span>
                                         </li>

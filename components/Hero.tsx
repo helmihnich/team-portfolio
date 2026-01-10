@@ -8,14 +8,14 @@ export default function Hero() {
     const now = new Date();
     const month = now.getMonth(); // 0-11
     const year = now.getFullYear();
-    
+
     // Determine quarter based on month
     let quarter;
     if (month >= 0 && month <= 2) quarter = 'Q1';
     else if (month >= 3 && month <= 5) quarter = 'Q2';
     else if (month >= 6 && month <= 8) quarter = 'Q3';
     else quarter = 'Q4';
-    
+
     return `${quarter} ${year}`;
   }, []);
 
@@ -50,7 +50,7 @@ export default function Hero() {
             </h1>
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] tracking-[-0.033em] max-w-5xl">
               <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-blue-500 animate-gradient">
-                Deploy a Strike Team.
+                Deploy a MedOps.
               </span>
             </h1>
           </div>
@@ -82,7 +82,7 @@ export default function Hero() {
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
             </button>
-            <button 
+            <button
               onClick={() => {
                 const element = document.getElementById('work');
                 element?.scrollIntoView({ behavior: 'smooth', block: 'start' });

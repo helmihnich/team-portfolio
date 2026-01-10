@@ -17,7 +17,7 @@ export default function Process() {
     {
       num: '03',
       title: 'Execute',
-      description: 'Sprint-based development with the "Strike Team." Elite velocity and code quality.',
+      description: 'Sprint-based development with the "MedOps." Elite velocity and code quality.',
       progress: 50,
       icon: '🚀',
     },
@@ -40,7 +40,7 @@ export default function Process() {
 
       {/* Vertical connecting line */}
       <div className="absolute left-10 lg:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-500/30 to-transparent hidden md:block" />
-      
+
       <div className="max-w-[1200px] mx-auto relative z-10">
         {/* Header */}
         <div className="flex flex-col items-center mb-20 text-center">
@@ -58,15 +58,15 @@ export default function Process() {
         {/* Steps Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {steps.map((step, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className="group relative flex flex-col gap-4 p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10"
             >
               {/* Large number background */}
               <div className="absolute -top-6 -right-4 text-8xl font-black text-blue-500/5 group-hover:text-blue-500/10 transition-colors duration-300">
                 {step.num}
               </div>
-              
+
               {/* Icon */}
               <div className="relative z-10 w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-500/30 text-2xl group-hover:scale-110 transition-transform duration-300">
                 {step.icon}
@@ -88,7 +88,7 @@ export default function Process() {
                   <span className="text-xs text-blue-400 font-semibold">{step.progress}%</span>
                 </div>
                 <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden border border-slate-700/50">
-                  <div 
+                  <div
                     className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-1000 ease-out shadow-lg shadow-blue-500/50"
                     style={{ width: `${step.progress}%` }}
                   />

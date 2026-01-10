@@ -23,12 +23,11 @@ export default function Header() {
 
   return (
     <>
-      <header 
-        className={`sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b transition-all duration-300 px-6 py-4 lg:px-20 ${
-          scrolled 
-            ? 'border-slate-700/50 bg-slate-950/95 backdrop-blur-xl shadow-lg shadow-black/20' 
+      <header
+        className={`sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b transition-all duration-300 px-6 py-4 lg:px-20 ${scrolled
+            ? 'border-slate-700/50 bg-slate-950/95 backdrop-blur-xl shadow-lg shadow-black/20'
             : 'border-slate-800/30 bg-slate-950/80 backdrop-blur-md'
-        }`}
+          }`}
       >
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 text-white group">
@@ -42,7 +41,7 @@ export default function Header() {
           </div>
           <div className="flex flex-col">
             <h2 className="text-white text-lg font-bold leading-tight tracking-tight group-hover:text-blue-400 transition-colors">
-              Strike Team
+              MedOps
             </h2>
             <span className="text-[10px] text-gray-500 font-medium tracking-wider uppercase">Elite Development</span>
           </div>
@@ -72,9 +71,9 @@ export default function Header() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="lg:hidden text-white p-2 hover:bg-slate-800/50 rounded-lg transition-colors" 
-          onClick={() => setIsMenuOpen(!isMenuOpen)} 
+        <button
+          className="lg:hidden text-white p-2 hover:bg-slate-800/50 rounded-lg transition-colors"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
           {isMenuOpen ? (
@@ -86,10 +85,9 @@ export default function Header() {
       </header>
 
       {/* Mobile Menu Overlay */}
-      <div 
-        className={`lg:hidden fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-xl transition-all duration-300 ${
-          isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+      <div
+        className={`lg:hidden fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-xl transition-all duration-300 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
         style={{ top: scrolled ? '73px' : '81px' }}
       >
         <nav className="flex flex-col gap-2 p-6">
@@ -99,26 +97,26 @@ export default function Header() {
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
               className="group flex items-center justify-between p-4 text-gray-300 hover:text-white rounded-xl hover:bg-slate-800/50 transition-all duration-300"
-              style={{ 
+              style={{
                 animationDelay: `${index * 50}ms`,
                 animation: isMenuOpen ? 'slideIn 0.3s ease-out forwards' : 'none'
               }}
             >
               <span className="text-lg font-medium">{link.label}</span>
-              <ArrowRight 
-                className="text-gray-600 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300" 
-                size={20} 
-                weight="bold" 
+              <ArrowRight
+                className="text-gray-600 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300"
+                size={20}
+                weight="bold"
               />
             </a>
           ))}
-          
+
           <div className="h-px bg-slate-800 my-4" />
-          
-          <button 
+
+          <button
             onClick={() => setIsMenuOpen(false)}
             className="group relative flex items-center justify-center gap-2 overflow-hidden rounded-xl h-14 px-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all text-white text-base font-bold shadow-xl shadow-blue-500/30"
-            style={{ 
+            style={{
               animationDelay: `${navLinks.length * 50}ms`,
               animation: isMenuOpen ? 'slideIn 0.3s ease-out forwards' : 'none'
             }}
